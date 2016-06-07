@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'ruby'
 gem 'rails_12factor'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 gem 'pg'

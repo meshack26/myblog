@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mysite</title>
+  <title>My Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+ 
 </head>
 <body>
 
+
+	<div class="nav nav-tabs">
+		<li ><%= link_to "Home", root_path %></li>
+		<li><%= link_to "Academic", academic_history_path %></li>
+		<li><%= link_to "About Me", about_me_path %></li>
+		<li><%= link_to "Contacts", contacts_path %></li>
+		<li><%= link_to "Family", family_path %></li>
+
+		<h1><center><strong>MESHACK BAFANA MOTLOUNG</strong></center></h1>
+		<div class="progress progress-striped active">
+  		<div class="progress-bar" style="width: 100%"></div>
+		</div>
+
+	</div>	
+
+
 <%= yield %>
+
+<div class="container">
+ 
+  <div class="background"></div>
+</div>
 
 </body>
 </html>

@@ -2,19 +2,149 @@
 @import "bootstrap";
 
 
+/* The Image Box */
+div.img {
+    border: 1px solid #ccc;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+/* The Image */
+div.img img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Description of Image */
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add Responsiveness */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.1)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Columns */
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* Clear Floats */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
 
 /* universal */
 
-.homebody {
-  height: 450px;
+body {
+  padding-top: 50px;
   background-color: black;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  font-family: verdana;
 }
 
- 
-
+section {
+  overflow: auto;
+}
 
 textarea {
   resize: vertical;
@@ -22,9 +152,10 @@ textarea {
 
 .center {
   text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
+}
+
+.center h1 {
+  margin-bottom: 10px;
 }
 
 /* typography */
@@ -35,25 +166,26 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  letter-spacing: -5px;
   margin-bottom: 30px;
   text-align: center;
+  
+   text-shadow: 2px 2px #737C99;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  text-shadow: 2px 2px #737C99;
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+  font-size: 1.0em;
+  line-height: 1.50em;
 }
-
 
 /* header */
 
@@ -61,207 +193,51 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: sky-blue;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 6px;
+  padding-top: 9px;
   font-weight: bold;
-  
-  &:hover {
-    color: red;
-    text-decoration: none;
-  }
+}
+
+#logo:hover {
+  color: gray;
+  text-decoration: none;
+  text-shadow: 2px 2px #FF0000;
 }
 
 /* footer */
 
-  
-html, body {
-  height: 20%;
-  padding-top: 50px;
-}
-.page-wrap {
-  min-height: 0%;
-  /* equal to footer height */
-  margin-bottom: 0px; 
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-.site-footer, .page-wrap:after {
-  height:250px; 
-}
-.site-footer {
-   
-  margin-left: -80px;
-  position: absolute;
+footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid gray-medium-light;
-  color: #07a;
-  background-color: #ffa;
-  a {
-    color: #07a;
-    &:hover {
-      color: blue;
-
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: left;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 12px;
-
-    }
-  }
-}
-
-
- 
-
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
- 
-}
-
-/* sidebar */
-
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-
-}
-
-input {
-  height: auto !important;
-}
-
-#error_explanation {
+  border-top: 1px solid #eaeaea;
   color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
+  float: right;
+  
 }
 
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+footer a {
+  color: #555;
 }
 
-checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
+footer a:hover {
+  color: #222;
+  text-shadow: 2px 2px #FF0000;
 }
 
-#session_remember_me {
-  width: auto;
-  margin-left: 0px;
+footer small {
+  float: middle;
+
 }
 
-/* Users index */
-
-.users {
+footer ul {
+  float: right;
   list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
 }
 
-.homecontainer{
- background-color:#fff; 
- margin-left:-90px;
-
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
 
-
-.bodydiv{
-    height: 100px;
-    margin-left: 90px;
-
- }
- 
-
- .imgdiv{
-  width: 600px;
-  height: 402px;
-  position: absolute;
-  top: 300px;
-  left: 320px;
-  border-style: solid;
-  border-color: #fff;
- }
-
-
- .clock{
-       position: absolute;
-       top: 60px;
-       left:550px;
-       color: #07a;
- }
-
-
- .tablehead{
-   background-color: #6cf;
-   border: 3px solid;
-   border-color: #6ad;
-
- }

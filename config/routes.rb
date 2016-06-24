@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'pages/contacts'
 
-  get 'pages/academic_history'
+  get 'pages/images'
 
   get 'pages/family'
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/about_me' => 'pages#about_me'
   get '/family' => 'pages#family'
   get '/contacts' => 'pages#contacts'
-  get '/academic_history' => 'pages#academic_history'
+  get '/images' => 'pages#images'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

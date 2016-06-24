@@ -23,7 +23,7 @@ function checkTime(i) {
   
 <body onload="startTime()" class="center jumbotron">
 
-  <h2 class="clock" id="txt"><p id="demo"></p></h2>
+  <h4 class="clock" id="txt"><p id="demo"></p></h4>
 
 
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
@@ -44,13 +44,13 @@ function checkTime(i) {
       <%= link_to image_tag("11.jpg", alt: "Team", size: "1400x900"), id: "team",align: "center" %>
       </div>
       <div class="item">
-        <%= link_to image_tag("12.jpg", alt: "Team", size: "1400x900"), id: "team" %>
+        <%= link_to image_tag("le.jpg", alt: "Team", size: "1400x900"), id: "team" %>
       </div>
       <div class="item" >
-        <%= link_to image_tag("e.jpg", alt: "Team", size: "1400x900"), id: "team" %>
+        <%= link_to image_tag("el.jpg", alt: "Team", size: "1400x900"), id: "team" %>
       </div>
       <div class="item">
-        <%= link_to image_tag("15.jpg", alt: "Team", size: "1400x900"), id: "team" %>
+        <%= link_to image_tag("f.jpg", alt: "Team", size: "1400x900"), id: "team" %>
       </div>
     </div>
 
@@ -78,3 +78,22 @@ function checkTime(i) {
 </div><div class="container"> 
  </div>
  </body>
+
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4">
+               <%= link_to(image_tag("/images/fb.png",:width =>50,:height =>50), "https://www.facebook.com/public/Meshack-Bafana-Motloung", :target => "_blank") %>
+                <p>Facebook</p>
+            </div>
+                <div class="col-xs-4">
+                <%= link_to(image_tag("/images/gg.jpeg",:width =>50,:height =>50), "https://plus.google.com/108396118919885674313", :target => "_blank") %>
+                <p>Google plus</p>
+              </div>
+              <div class="col-xs-4">
+                <%= link_to(image_tag("/images/lk.jpg",:width =>50,:height =>50), "https://za.linkedin.com/in/bafana-motloung-4b816b61", :target => "_blank") %>
+                <p>LinkedIn</p>
+              </div>
+                  
+                
+
+               

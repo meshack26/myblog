@@ -1,16 +1,19 @@
 <header class="navbar navbar-fixed-top navbar-inverse" >
  
   <div class="container">
+  <div class="col-xs-1">
+  <%= link_to(image_tag("/images/mee.jpg",:width =>70,:height =>70, :class => "img-circle"),"/images/b.jpg") %>
+  </div>
   <%= link_to "BAFANA MESHACK MOTLOUNG", '#', id: "logo" %>
  
     <nav>
 
       <ul class="nav nav-pills pull-right">
       <li ><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Academic", academic_history_path %></li>
     <li><%= link_to "About Me", about_me_path %></li>
     <li><%= link_to "Contacts", contacts_path %></li>
     <li><%= link_to "Family", family_path %></li>
+    <li><%= link_to "Images", images_path %></li>
       </ul>
     </nav>
  

@@ -1,87 +1,58 @@
-<h2>Family</h2>
+<h2>My Family</h2>
 
-<div class="responsive">
-  <div class="img">
-      <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
-    <div class="desc">Trolltunga Norway</div>
+<div class="row slideanim">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="/images/1.jpg" alt="bafana">
+      <div class="caption">
+        <h3>Pheello Motloung</h3>
+        <p>Father of two girls and me Bafana,<br>
+           Married and working  </p>
+        <p><a href="/images/1.jpg" class="btn btn-primary" role="button">Full picture</a> </p>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row slideanim">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="/images/q.jpg" alt="bafana">
+      <div class="caption">
+        <h3>Bohlokwa Motloung</h3>
+        <p>Last born,the one who does'nt listen...lol<br>
+            </p>
+        <p><a href="/images/q.jpg" class="btn btn-primary" role="button">Full picture</a> </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row slideanim">
+  <div class="col-sm-4 col-md-4">
+    <div class="thumbnail">
+      <img src="/images/0.jpg" alt="bafana">
+      <div class="caption">
+        <h3>Elizabeth Motloung</h3>
+        <p>Our Mother the pillar of my little family,<br>
+           She makes sure we don't sleep hungry   </p>
+        <p><a href="/images/0.jpg" class="btn btn-primary" role="button">Full picture</a> </p>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row slideanim">
+  <div class="col-sm-4 col-md-4">
+    <div class="thumbnail">
+      <img src="/images/2.jpg" alt="bafana">
+      <div class="caption">
+        <h3>Rethabile Motloung</h3>
+        <p>My little sister the clever one,<br>
+           smart and intelligent </p>
+        <p><a href="/images/2.jpg" class="btn btn-primary" role="button">Full picture</a> </p>
+      </div>
+    </div>
   </div>
 </div>
-
-
-<div class="responsive">
-  <div class="img">
-    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-    <div class="desc">Forest Bridge</div>
-  </div>
 </div>
-
-<div class="responsive">
-  <div class="img">
-    <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200">
-    <div class="desc">Northern Lights, Norway</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="img">
-    <img src="img_mountains.jpg" alt="Mountains" width="300" height="200">
-    <div class="desc">Beautiful Mountains</div>
-  </div>
-</div>
-
-<div class="clearfix"></div>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">×</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
-
-// Get all images and insert the clicked image inside the modal
-// Get the content of the image description and insert it inside the modal image caption
-var images = document.getElementsByTagName('img');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-var i;
-for (i = 0; i < images.length; i++) {
-   images[i].onclick = function(){
-       modal.style.display = "block";
-       modalImg.src = this.src;
-       modalImg.alt = this.alt;
-       captionText.innerHTML = this.nextElementSibling.innerHTML;
-   }
-}
-</script>
-
-<div style="padding:6px;">
- 
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
